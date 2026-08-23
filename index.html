@@ -546,13 +546,27 @@ a{transition:color .2s ease,background .2s ease,border .2s ease,transform .2s ea
     linear-gradient(135deg,var(--deep-green-2),var(--deep-green));
   border:1px solid rgba(18,53,47,.12);
 }
-.photo-slot-main{min-height:620px}
-.photo-slot-menu{min-height:303px;background:
-    radial-gradient(circle at 70% 30%,rgba(233,120,45,.35),transparent 24%),
-    linear-gradient(145deg,#173f37,#0d2824)}
-.photo-slot-space{min-height:303px;background:
-    radial-gradient(circle at 30% 50%,rgba(233,120,45,.24),transparent 22%),
-    linear-gradient(145deg,#294f46,#102d28)}
+.photo-slot-main{
+  min-height:620px;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.05) 45%,rgba(0,0,0,.62) 100%),
+    url("images/grottapimac-exterior.jpg") center/cover no-repeat;
+}
+.photo-slot-menu{
+  min-height:303px;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.04) 35%,rgba(0,0,0,.58) 100%),
+    url("images/grottapimac-pizza.jpg") center/cover no-repeat;
+}
+.photo-slot-space{
+  min-height:303px;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.04) 35%,rgba(0,0,0,.58) 100%),
+    url("images/grottapimac-interior.jpg") center/cover no-repeat;
+}
+.photo-slot{transition:transform .25s ease,box-shadow .25s ease}
+.photo-slot:hover{transform:translateY(-3px);box-shadow:0 18px 45px rgba(0,0,0,.18)}
+
 .photo-slot-inner{position:absolute;left:32px;right:32px;bottom:30px;color:#fff}
 .photo-slot-inner span{font-size:10px;letter-spacing:.15em;color:var(--orange);font-weight:900}
 .photo-slot-inner b{display:block;font-size:32px;line-height:1.12;letter-spacing:-.05em;margin:10px 0}
@@ -1318,16 +1332,16 @@ img{
     </div>
 
     <div class="place-hero-grid">
-      <div class="photo-slot photo-slot-main">
+      <div class="photo-slot photo-slot-main" role="img" aria-label="그로타피맥 하남 미사점 매장 외부 사진">
         <div class="photo-slot-inner">
           <span>STORE PHOTO</span>
-          <b>그로타피맥<br>매장 대표사진</b>
-          <small>네이버 플레이스 원본 사진을 전달받으면 이 영역에 최종 반영합니다.</small>
+          <b>그로타피맥<br>매장 외부</b>
+          <small>하남 미사 그로타피맥의 실제 매장 외부 전경입니다.</small>
         </div>
       </div>
       <div class="photo-stack">
-        <div class="photo-slot photo-slot-menu"><div class="photo-slot-inner"><span>MENU</span><b>대표 피자</b></div></div>
-        <div class="photo-slot photo-slot-space"><div class="photo-slot-inner"><span>SPACE</span><b>매장 분위기</b></div></div>
+        <div class="photo-slot photo-slot-menu" role="img" aria-label="그로타피맥 대표 피자 사진"><div class="photo-slot-inner"><span>MENU</span><b>대표 피자</b></div></div>
+        <div class="photo-slot photo-slot-space" role="img" aria-label="그로타피맥 매장 내부 분위기 사진"><div class="photo-slot-inner"><span>SPACE</span><b>매장 분위기</b></div></div>
       </div>
     </div>
 
