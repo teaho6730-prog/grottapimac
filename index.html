@@ -539,7 +539,7 @@ a{transition:color .2s ease,background .2s ease,border .2s ease,transform .2s ea
 .place-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:45px}
 .place-hero-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:14px}
 .photo-stack{display:grid;grid-template-rows:1fr 1fr;gap:14px}
-.photo-slot{
+.photo-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;} .photo-slot img + .photo-slot-inner{z-index:2;} .photo-slot:has(img):after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04) 25%,rgba(0,0,0,.72) 100%);pointer-events:none;} .photo-slot{
   position:relative;min-height:300px;border-radius:18px;overflow:hidden;
   background:
     radial-gradient(circle at 25% 25%,rgba(233,120,45,.28),transparent 25%),
@@ -1156,15 +1156,27 @@ img{
 </div>
 <div class="place-hero-grid">
 <div class="photo-slot photo-slot-main">
-<div class="photo-slot-inner">
-<span>매장 사진</span>
-<b>그로타피맥<br/>매장 대표사진</b>
-<small>그로타피맥 매장 대표사진</small>
-</div>
+  <img src="images/grottapimac-exterior.jpg" alt="그로타피맥 매장 외관">
+  <div class="photo-slot-inner">
+    <span>STORE PHOTO</span>
+    <b>그로타피맥<br>매장 대표사진</b>
+  </div>
 </div>
 <div class="photo-stack">
-<div class="photo-slot photo-slot-menu"><div class="photo-slot-inner"><span>MENU</span><b>대표 피자</b></div></div>
-<div class="photo-slot photo-slot-space"><div class="photo-slot-inner"><span>SPACE</span><b>매장 분위기</b></div></div>
+<div class="photo-slot photo-slot-menu">
+  <img src="images/grottapimac-pizza.jpg" alt="그로타피맥 대표 피자">
+  <div class="photo-slot-inner">
+    <span>MENU</span>
+    <b>대표 피자</b>
+  </div>
+</div>
+<div class="photo-slot photo-slot-space">
+  <img src="images/grottapimac-interior.jpg" alt="그로타피맥 매장 내부">
+  <div class="photo-slot-inner">
+    <span>SPACE</span>
+    <b>매장 분위기</b>
+  </div>
+</div>
 </div>
 </div>
 <div class="menu-showcase">
@@ -1182,8 +1194,7 @@ img{
 <div class="store-info">
 <div><span>STORE</span><b>그로타피맥</b></div>
 <div><span>ADDRESS</span><b>하남시 미사강변중앙로218 1층 그로타피맥</b><a class="store-direct-link" href="https://pcmap.place.naver.com/restaurant/2042956100/home?from=map&amp;fromPanelNum=1&amp;additionalHeight=76&amp;timestamp=202608141946&amp;locale=ko&amp;svcName=map_pcv5" rel="noopener" target="_blank">네이버지도에서 매장 보기 →</a></div>
-<div><span>PLACE</span><b>네이버지도 플레이스 ID 2042956100</b></div>
-<div><span>RATING</span><b>네이버지도 검색 결과 4.8 / 리뷰 4건</b></div>
+
 </div>
 </div>
 </section>
@@ -1242,7 +1253,7 @@ img{
 <div class="process-card"><span>04</span><b>교육·준비</b><small>오픈을 위한 교육과 매장 준비를 진행합니다.</small></div>
 <div class="process-card"><span>05</span><b>매장 오픈</b><small>최종 점검 후 고객을 맞이합니다.</small></div>
 </div>
-<p class="disclaimer"></p>
+
 </div>
 </section>
 <section class="section faq-section" id="faq">
